@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nintendo Character Management</title>
+
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- RALEWAY FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/loader.css">
+  <link rel="stylesheet" href="../css/modals.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <script defer src="../js/profile.js"></script>
+  <script defer src="../js/main.js"></script>
+  
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="../index.html" class="logo">
+      <img src="../images/Nintendo_logo.svg" alt="Nintendo">
+    </a>
+    <div class="menu">
+      <button class="nav-btn">
+        <img src="../images/mushroom.svg" alt="admin">
+        <span class="nav-text">
+          Admin
+          <i data-feather="chevron-down"></i>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PROFILE SECTION -->
+  <section class="profile">
+    <div class="back-home">
+      <a href="../index.html"><i data-feather="arrow-left"></i>Back to main</a>
+    </div>
+    <div class="profile-actions">
+      <h1>Character Details</h1>
+      <button class="btn btn--edit" id="edit-btn">
+        <i data-feather="edit-2"></i>
+        Edit character
+      </button>
+    </div>
+    <div class="profile-data">
+      <div class="profile-pic">
+        <img src="../images/mario.png" alt="">
+      </div>
+      <div class="profile-details">
+        <div class="profile-name">
+          <h5>Name:</h5>
+          <p class="name">Mario</p>
+        </div>
+        <div class="profile-role">
+          <h5>Role:</h5>
+          <p class="role">Hero/Plumber</p>
+        </div>
+        <div class="profile-species">
+          <h5>Species:</h5>
+          <p class="species">Human</p>
+        </div>
+        <div class="profile-homeland">
+          <h5>Homeland:</h5>
+          <p class="homeland">Mushroom Kingdom</p>
+        </div>
+        <div class="profile-status">
+          <div class="status">
+            <p class="status-text">On a mission</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL: EDIT CHARACTER-->
+  <div class="edit-modal">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <div class="profile-image">
+        <img id="profile-preview" src="../images/placeholder-img.png" alt="empty-profile">
+        <div class="img-actions">
+          <label for="upload-img"><i data-feather="edit"></i>Upload</label>
+          <input type="file" id="upload-img" accept="image/*">
+          <label for="reset-img"><i data-feather="rotate-ccw"></i>Reset</label>
+          <input type="reset" id="reset-img">
+        </div>
+      </div>
+      <form id="form">
+        <div class="character-name">
+          <p>Name</p>
+          <input type="text" id="name" name="name" placeholder="What's the character's name?" required>
+        </div>
+        <div class="character-role">
+          <p>Role</p>
+          <input type="text" id="role" name="role" placeholder="What's the character's role? (e.g Hero)">
+        </div>
+        <div class="character-species">
+          <p>Species</p>
+          <input type="text" id="species" name="species" placeholder="What's the character's species? (e.g Koopa)">
+        </div>
+        <div class="character-home">
+          <p>Homeland</p>
+          <input type="text" id="homeland" name="homeland" placeholder="Where is the character from?">
+        </div>
+        <div class="character-status">
+          <p>Status</p>
+          <div class="radio-select">
+            <div class="status-wrapper">
+              <input type="radio" id="available" name="status" checked>
+              <label for="available">Available</label><br>
+            </div>  
+            <div class="status-wrapper">
+              <input type="radio" id="mission" name="status">
+              <label for="mission">On a mission</label><br>  
+            </div> 
+            <div class="status-wrapper">
+              <input type="radio" id="missing" name="status">
+              <label for="missing">Missing</label><br><br>
+            </div>
+          </div>  
+        </div>
+        <button type="submit" value="Submit" id="edit-character" class="btn btn--edit">Edit character</button> 
+      </form>
+    </div>
+  </div>
+
+  <!-- ICONS -->
+  <script script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      feather.replace();
+    });
+  </script>
+
+</body>
+</html>

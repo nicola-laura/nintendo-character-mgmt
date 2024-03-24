@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nintendo Character Management</title>
+
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- RALEWAY FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/loader.css">
+  <link rel="stylesheet" href="./css/modals.css">
+  <script defer src="./js/main.js"></script>
+  <script defer src="./js/loader.js"></script>
+  <script defer src="./js/search.js"></script>
+  <script defer src="./js/profile.js"></script>
+  <script defer src="./js/scroll.js"></script>
+  <script defer src="./js/download.js"></script>
+  
+</head>
+<body>  
+  <!-- LOADING ANIMATION -->
+  <div class="loader"></div>
+
+  <!-- HEADER -->
+  <header>
+      <a href="./index.html" class="logo">
+        <img src="./images/Nintendo_logo.svg" alt="Nintendo">
+      </a>
+      <div class="menu">
+        <button class="nav-btn download">
+          Download
+          <i data-feather="download"></i>
+        </button>
+        <button class="nav-btn">
+          <img src="./images/mushroom.svg" alt="admin">
+          <span class="nav-text">
+            Admin
+            <i data-feather="chevron-down"></i>
+          </span>
+        </button>
+      </div>
+  </header>
+
+  <!-- TITLE SECTION -->
+  <section class="title">
+    <div class="wrapper">
+      <h1>Character Management System</h1>
+    </div>
+    <div class="actions">
+      <button class="btn btn--add" id="add-btn">
+        <i data-feather="plus-circle"></i>
+        Add character
+      </button>
+      <div class="searchbar">
+        <i data-feather="search"></i>
+        <input type="text" placeholder="Search character by name">
+      </div>
+    </div>
+  </section>
+
+  <!-- LIST SECTION -->
+  <section class="list" id="infinite">
+    <div class="listing-tabs">
+      <span>Profile</span>
+      <span>Name</span>
+      <span>Role</span>
+      <span>Species</span>
+      <span>Homeland</span>
+      <span>Status</span>
+      <span>Delete</span>
+    </div>
+    <div class="listing-container">
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/mario.png" alt="profile">
+        </div>
+        <div class="name">Mario</div>
+        <div class="role">Hero/Plumber</div>
+        <div class="species">Human</div>
+        <div class="homeland">Mushroom Kingdom</div>
+        <div class="status mission">
+          <p>On a mission</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/luigi.png" alt="profile">
+        </div>
+        <div class="name">Luigi</div>
+        <div class="role">Brother/Plumber</div>
+        <div class="species">Human</div>
+        <div class="homeland">Mushroom Kingdom</div>
+        <div class="status available">
+            <p>Available</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/peach.png" alt="profile">
+        </div>
+        <div class="name">Peach</div>
+        <div class="role">Princess</div>
+        <div class="species">Human</div>
+        <div class="homeland">Mushroom Kingdom</div>
+        <div class="status missing">
+            <p>Missing</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/yoshi.png" alt="profile">
+        </div>
+        <div class="name">Yoshi</div>
+        <div class="role">Helper</div>
+        <div class="species">Disnosaur </div>
+        <div class="homeland">Yoshi's Island</div>
+        <div class="status available">
+            <p>Available</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/toad.jpg" alt="profile">
+        </div>
+        <div class="name">Toad</div>
+        <div class="role">Helper</div>
+        <div class="species">Toad</div>
+        <div class="homeland">Mushroom Kingdom</div>
+        <div class="status available">
+          <p>Available</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/bowser.png" alt="profile">
+        </div>
+        <div class="name">Bowser</div>
+        <div class="role">Villain</div>
+        <div class="species">Koopa</div>
+        <div class="homeland">Koopa Kingdom</div>
+        <div class="status mission">
+          <p>On a mission</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/wario.jpg" alt="profile">
+        </div>
+        <div class="name">Wario</div>
+        <div class="role">Villain</div>
+        <div class="species">Human</div>
+        <div class="homeland">Mushroom Kingdom</div>
+        <div class="status available">
+          <p>Available</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/waluigi.png" alt="profile">
+        </div>
+        <div class="name">Waluigi</div>
+        <div class="role">Villain</div>
+        <div class="species">Human</div>
+        <div class="homeland">Unknown</div>
+        <div class="status available">
+          <p>Available</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/shyguy.png" alt="profile">
+        </div>
+        <div class="name">Shy Guy</div>
+        <div class="role">Villain</div>
+        <div class="species">Unknown</div>
+        <div class="homeland">Toy Box</div>
+        <div class="status alert">
+          <p>Missing</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/donkeykong.png" alt="profile">
+        </div>
+        <div class="name">Donkey Kong</div>
+        <div class="role">Hero & Villain</div>
+        <div class="species">Kong</div>
+        <div class="homeland">Kong Country</div>
+        <div class="status mission">
+          <p>On a mission</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/kingboo.jpg" alt="profile">
+        </div>
+        <div class="name">King Boo</div>
+        <div class="role">Villain</div>
+        <div class="species">Big Boo</div>
+        <div class="homeland">Paranormal dimension</div>
+        <div class="status available">
+          <p>Available</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+      <div class="listing-wrapper">
+        <div class="profile">
+          <img src="./images/koopatroopa.jpg" alt="profile">
+        </div>
+        <div class="name">Koopa Troopa</div>
+        <div class="role">Villain</div>
+        <div class="species">Koopa</div>
+        <div class="homeland">Koopa Kingdom</div>
+        <div class="status mission">
+          <p>On a mission</p>
+        </div>
+        <i class="delete-icon" data-feather="trash-2"></i>
+      </div>
+    </div>
+    <div class="no-results" style="display: none;">No results found</div>
+  </section>
+
+  <!-- MODAL: ADD CHARACTER-->
+  <div class="add-modal">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <div class="profile-image">
+        <img id="profile-preview" src="./images/placeholder-img.png" alt="empty-profile">
+        <div class="img-actions">
+          <label for="upload-img"><i data-feather="edit"></i>Upload</label>
+          <input type="file" id="upload-img" accept="image/*">
+          <label for="reset-img"><i data-feather="rotate-ccw"></i>Reset</label>
+          <input type="reset" id="reset-img">
+        </div>
+      </div>
+      <form id="form">
+        <div class="character-name">
+          <p>Name <span class="mandatory">*</span></p>
+          <input type="text" id="name" name="name" placeholder="What's the character's name?" required>
+          <span class="error-message">Please input a name to continue</span>
+        </div>
+        <div class="character-role">
+          <p>Role</p>
+          <input type="text" id="role" name="role" placeholder="What's the character's role? (e.g Hero)">
+        </div>
+        <div class="character-species">
+          <p>Species</p>
+          <input type="text" id="species" name="species" placeholder="What's the character's species? (e.g Koopa)">
+        </div>
+        <div class="character-home">
+          <p>Homeland</p>
+          <input type="text" id="homeland" name="homeland" placeholder="Where is the character from?">
+        </div>
+        <div class="character-status">
+          <p>Status</p>
+          <div class="radio-select">
+            <div class="status-wrapper">
+              <input type="radio" id="available" name="status" checked>
+              <label for="available">Available</label><br>
+            </div>  
+            <div class="status-wrapper">
+              <input type="radio" id="mission" name="status">
+              <label for="mission">On a mission</label><br>  
+            </div> 
+            <div class="status-wrapper">
+              <input type="radio" id="missing" name="status">
+              <label for="missing">Missing</label><br><br>
+            </div>
+          </div>  
+        </div>
+        <button type="submit" value="Submit" id="add-character" class="btn btn--add">Add character</button> 
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: DELETE CHARACTER (CONFIRM) -->
+  <div class="delete-modal">
+    <div class="modal-content">
+      <img src="./images/delete-modal-question.jpg" alt="questionmark">
+      <p>Are you sure you want to delete this character?</p>
+      <div class="modal-btns">
+        <button class="modal-btn cancel">No, go back</button>
+        <button class="modal-btn confirm">Yes, delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICONS -->
+  <script script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      feather.replace();
+    });
+  </script>
+  
+</body>
+</html>

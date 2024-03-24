@@ -1,0 +1,381 @@
+/* MODAL STYLES */
+/* ADD CHARACTER */
+.add-modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.add-modal .modal-content {
+  width: 500px;
+  height: auto;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+@media screen and (max-width: 630px) {
+  .add-modal .modal-content {
+    width: 100%;
+    margin: 1.25rem;
+  }
+}
+.add-modal .modal-content .profile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.add-modal .modal-content .profile-image img {
+  max-width: 7.5rem;
+  width: 100%;
+  max-height: 7.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-grey);
+  overflow: hidden;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  object-fit: cover;
+  object-position: top;
+}
+.add-modal .modal-content .profile-image .img-actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.625rem;
+}
+.add-modal .modal-content .profile-image .img-actions input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 7rem;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.add-modal .modal-content .profile-image .img-actions input[type="reset"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 7rem;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.add-modal .modal-content .profile-image .img-actions label {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.875rem;
+  border: 1px solid var(--color-grey);
+  background: var(--color-lightgrey);
+  color: var(--color-darkgrey);
+  cursor: pointer;
+}
+.add-modal .modal-content .profile-image svg {
+  width: 15px;
+  height: 15px;
+}
+.add-modal .modal-content form p {
+  font-size: rem;
+  text-align: left;
+  margin-bottom: 0.625rem;
+}
+.add-modal .modal-content .character-name {
+  position: relative;
+}
+.add-modal .modal-content form input.error {
+  border-color: var(--color-active);
+}
+.add-modal .modal-content form .error-message {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--color-active);
+  text-align: left;
+  position: absolute;
+  top: 3px;
+  left: 60px;
+}
+.add-modal .modal-content form input {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  padding: 0.5rem 0.625rem;
+  border-radius: 1.875rem;
+  border: 1px solid var(--color-grey);
+  box-sizing: border-box;
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+}
+.add-modal .modal-content form input:focus {
+  outline: none;
+  border: 1px solid var(--color-black);
+}
+.add-modal .modal-content input::placeholder {
+  color: var(--color-darkgrey);
+  font-family: "Raleway", sans-serif;
+}
+.add-modal .modal-content .close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 2.813rem;
+  font-weight: 300;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.add-modal .modal-content form .character-status .radio-select {
+  display: flex;
+  margin-bottom: 2.5rem;
+  gap: 1.25rem;
+}
+.add-modal .modal-content form .character-status .radio-select .status-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  gap: 0.625rem;
+}
+.add-modal .modal-content form .character-status .radio-select .status-wrapper input[type="radio"] {
+  accent-color: var(--color-black);
+  vertical-align: middle;
+  margin: 0;
+}
+.add-modal .modal-content .character-status .radio-select .status-wrapper input[type="radio"]:checked + label {
+  color: var(--color-black)
+}
+.add-modal .modal-content .character-status .radio-select .status-wrapper label {
+  min-width: fit-content;
+  color: var(--color-darkgrey);
+  font-size: 1rem;
+  align-items: center;
+}
+
+/* DELETE CHARACTER */
+.delete-modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.delete-modal .modal-content {
+  width: 28.125rem;
+  height: auto;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+@media screen and (max-width: 630px) {
+  .delete-modal .modal-content {
+    width: 100%;
+    margin: 1.25rem;
+  }
+}
+.delete-modal .modal-content img {
+  width: 3.4375rem;
+  height: 3.4375rem;
+  margin-bottom: 1.5rem;
+}
+.delete-modal .modal-content p {
+  color: var(--color-black);
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+.delete-modal .modal-content .modal-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.delete-modal .modal-content .modal-btns button {
+  padding: 0.5rem 1rem;
+  border-radius: 1.875rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.delete-modal .modal-content .modal-btns .modal-btn.cancel {
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+.delete-modal .modal-content .modal-btns .modal-btn.cancel:hover {
+  border: 1px solid var(--color-active);
+  color: var(--color-active);
+  background-color: var(--color-white);
+}
+.delete-modal .modal-content .modal-btns .modal-btn.confirm {
+ background-color: var(--color-black); 
+ color: var(--color-white);
+ border: none;
+}
+.delete-modal .modal-content .modal-btns .modal-btn.confirm:hover {
+  background-color: var(--color-active); 
+  color: var(--color-white);
+  border: none;
+ }
+
+.add-modal .modal-content,
+.delete-modal .modal-content {
+  cursor: default;
+}
+
+/* EDIT CHARACTER */
+.edit-modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.edit-modal .modal-content {
+  width: 500px;
+  height: auto;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+.edit-modal .modal-content .profile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.edit-modal .modal-content .profile-image img {
+  max-width: 7.5rem;
+  width: 100%;
+  max-height: 7.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-grey);
+  overflow: hidden;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  object-fit: cover;
+  object-position: top;
+}
+.edit-modal .modal-content .profile-image .img-actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.625rem;
+}
+.edit-modal .modal-content .profile-image .img-actions input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 7rem;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.edit-modal .modal-content .profile-image .img-actions input[type="reset"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 7rem;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.edit-modal .modal-content .profile-image .img-actions label {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.875rem;
+  border: 1px solid var(--color-grey);
+  background: var(--color-lightgrey);
+  color: var(--color-darkgrey);
+  cursor: pointer;
+}
+.edit-modal .modal-content .profile-image svg {
+  width: 15px;
+  height: 15px;
+}
+.edit-modal .modal-content form p {
+  font-size: rem;
+  text-align: left;
+  margin-bottom: 0.625rem;
+}
+.edit-modal .modal-content .character-name {
+  position: relative;
+}
+.edit-modal .modal-content form input {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  padding: 0.5rem 0.625rem;
+  border-radius: 1.875rem;
+  border: 1px solid var(--color-grey);
+  box-sizing: border-box;
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+}
+.edit-modal .modal-content form input:focus {
+  outline: none;
+  border: 1px solid var(--color-black);
+}
+.edit-modal .modal-content input::placeholder {
+  color: var(--color-darkgrey);
+  font-family: "Raleway", sans-serif;
+}
+.edit-modal .modal-content .close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 2.813rem;
+  font-weight: 300;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.edit-modal .modal-content form .character-status .radio-select {
+  display: flex;
+  margin-bottom: 2.5rem;
+  gap: 1.25rem;
+}
+.edit-modal .modal-content form .character-status .radio-select .status-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  gap: 0.625rem;
+}
+.edit-modal .modal-content form .character-status .radio-select .status-wrapper input[type="radio"] {
+  accent-color: var(--color-black);
+  vertical-align: middle;
+  margin: 0;
+}
+.edit-modal .modal-content .character-status .radio-select .status-wrapper input[type="radio"]:checked + label {
+  color: var(--color-black)
+}
+.edit-modal .modal-content .character-status .radio-select .status-wrapper label {
+  min-width: fit-content;
+  color: var(--color-darkgrey);
+  font-size: 1rem;
+  align-items: center;
+}
